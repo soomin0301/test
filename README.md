@@ -1,3 +1,3 @@
 test+read
 test test test
-test and read
+readtest
