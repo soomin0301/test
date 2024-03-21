@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link rel="stylesheet" href="./style.css" />
+    <link
+      ref="stylesheet"
+      href="https://fonts.googleapis.com/css?family=Roboto"
+    />
+  </head>
+  <body>
+    <script src="./main.js"></script>
+
+    <div id="location">Seoul</div>
+    <div id="day-time">Now</div>
+
+    <!-- weathericon -->
+    <div id="weathericon"></div>
+
+    <!-- temperature -->
+    <div id="temperature">
+      <span id="degree">30</span><span id="unit">&#8451;</span>
+    </div>
+
+    <!-- button -->
+    <button id="button" onclick="update()">Update</button>
+
+    <!-- more information -->
+    <div id="more-info">
+      <div id="sunrise">
+        <div class="more-info-img">
+          <svg
+            width="24"
+            height="24"
+            viewBox="0 0 24 24"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <g clip-path="url(#clip0_1_32)">
+              <path
+                d="M12 17C14.7614 17 17 14.7614 17 12C17 9.23858 14.7614 7 12 7C9.23858 7 7 9.23858 7 12C7 14.7614 9.23858 17 12 17Z"
+                stroke="black"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              />
+              <path
+                d="M12 1V3"
+                stroke="black"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              />
+              <path
+                d="M12 21V23"
+                stroke="black"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              />
+              <path
+                d="M4 4.22L5.42 5.64"
+                stroke="black"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              />
+              <path
+                d="M18.36 18.36L19.78 19.78"
+                stroke="black"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              />
+              <path
+                d="M1 12H3"
+                stroke="black"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              />
+              <path
+                d="M21 12H23"
+                stroke="black"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              />
+              <path
+                d="M4.22 19.78L5.64 18.36"
+                stroke="black"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              />
+              <path
+                d="M18 5.64L19.42 4.22"
+                stroke="black"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              />
+            </g>
+            <defs>
+              <clipPath id="clip0_1_32">
+                <rect width="24" height="24" fill="white" />
+              </clipPath>
+            </defs>
+          </svg>
+        </div>
+        <div class="more-info-title">Sunrise</div>
+        <div id="sunrise-time" class="more-info-value">6:00</div>
+        <div id="sunrise-time" class="more-info-value">AM</div>
+      </div>
+
+      <div id="wind">
+        <div class="more-info-img">
+          <svg
+            width="24"
+            height="24"
+            viewBox="0 0 24 24"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              d="M9.59 4.59C9.82231 4.35631 10.1088 4.18364 10.4239 4.08734C10.739 3.99104 11.073 3.97408 11.3963 4.03799C11.7195 4.10189 12.022 4.24468 12.2768 4.45364C12.5315 4.66261 12.7307 4.93129 12.8566 5.23579C12.9825 5.54029 13.0313 5.87119 12.9985 6.19906C12.9657 6.52693 12.8524 6.84162 12.6687 7.11516C12.4849 7.38869 12.2365 7.61259 11.9454 7.76696C11.6542 7.92133 11.3295 8.00138 11 8H2M12.59 19.41C12.8223 19.6437 13.1088 19.8164 13.4239 19.9127C13.739 20.009 14.073 20.0259 14.3963 19.962C14.7195 19.8981 15.022 19.7553 15.2768 19.5464C15.5315 19.3374 15.7307 19.0687 15.8566 18.7642C15.9825 18.4597 16.0313 18.1288 15.9985 17.8009C15.9657 17.4731 15.8524 17.1584 15.6687 16.8848C15.4849 16.6113 15.2365 16.3874 14.9454 16.233C14.6542 16.0787 14.3295 15.9986 14 16H2M17.73 7.73C18.0208 7.43988 18.3787 7.22591 18.7719 7.10701C19.1652 6.98811 19.5816 6.96794 19.9845 7.04828C20.3874 7.12863 20.7642 7.30702 21.0817 7.56767C21.3993 7.82832 21.6477 8.1632 21.805 8.54269C21.9623 8.92218 22.0236 9.33459 21.9836 9.74344C21.9436 10.1523 21.8035 10.545 21.5756 10.8868C21.3477 11.2286 21.0391 11.509 20.6771 11.7031C20.3151 11.8973 19.9108 11.9993 19.5 12H2"
+              stroke="black"
+              stroke-width="2"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            />
+          </svg>
+        </div>
+        <div class="more-info-title">Wind</div>
+        <div id="wind-speed" class="more-info-value">8</div>
+        <div id="wind-speeddg" class="more-info-value">km/h</div>
+      </div>
+
+      <div id="humidity">
+        <div class="more-info-img">
+          <svg
+            width="24"
+            height="25"
+            viewBox="0 0 24 25"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              d="M12 3.19L17.66 8.85C18.7793 9.96861 19.5418 11.3941 19.8509 12.9461C20.16 14.498 20.0019 16.1069 19.3965 17.569C18.7912 19.0311 17.7658 20.2808 16.4501 21.1601C15.1344 22.0394 13.5875 22.5087 12.005 22.5087C10.4225 22.5087 8.8756 22.0394 7.55989 21.1601C6.24419 20.2808 5.21881 19.0311 4.61346 17.569C4.00812 16.1069 3.85 14.498 4.1591 12.9461C4.46821 11.3941 5.23066 9.96861 6.35 8.85L12 3.19Z"
+              stroke="black"
+              stroke-width="2"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            />
+          </svg>
+        </div>
+        <div class="more-info-title">Humidity</div>
+        <div id="humidity-pct" class="more-info-value">61</div>
+        <div id="wind-speeddg" class="more-info-value">%</div>
+      </div>
+    </div>
+  </body>
+</html>
