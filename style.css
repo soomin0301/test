@@ -1,0 +1,111 @@
+body {
+  font-family: "Roboto", serif;
+  padding: 30px;
+}
+
+#location {
+  font-size: 24px;
+  font-family: "Roboto", serif;
+  font-weight: bold;
+  text-transform: uppercase;
+  text-align: center;
+
+  margin-top: 30px;
+  letter-spacing: 2px;
+}
+
+#day-time {
+  font-size: 16px;
+  text-transform: uppercase;
+  text-align: center;
+  color: #aaa;
+  letter-spacing: 1px;
+  margin-top: 10px;
+}
+
+#weathericon {
+  width: 360px;
+  height: 360px;
+  background-color: #ffb145;
+
+  margin-top: 35px;
+  margin-bottom: 35px;
+  margin-left: auto;
+  margin-right: auto;
+  border-radius: 30%;
+}
+
+#temperature {
+  font-size: 36px;
+  text-align: center;
+  margin-top: 10px;
+}
+
+#unit {
+  font-family: Verdana, sans-serif;
+}
+
+#button {
+  position: absolute;
+  top: 70px;
+  right: 30px;
+}
+
+/*  */
+#sunrise {
+  border-right: 1px solid #ddd;
+  flex: 1;
+}
+#wind {
+  border-right: 1px solid #ddd;
+  flex: 1;
+}
+#humidity {
+  flex: 1;
+}
+#more-info {
+  max-width: 360px;
+  display: flex;
+  justify-content: space-between;
+
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 20px;
+  align-items: stretch;
+
+  font-size: 17px;
+  text-align: center;
+}
+.more-info-title {
+  font-size: 11px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  color: #999;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+.more-info-img img {
+  width: 20%;
+  opacity: 0.3;
+}
+.more-info-value {
+  color: #515151;
+  letter-spacing: 1px;
+}
+
+.button {
+  position: absolute;
+  top: 70px;
+  right: 30px;
+  background-color: black;
+  border: none;
+  color: white;
+  padding: 5px 12px;
+  border-radius: 2px;
+  font-size: 14px;
+}
+.button:hover {
+  background-color: #777;
+  cursor: pointer;
+  transition: all 0.6s;
+}
